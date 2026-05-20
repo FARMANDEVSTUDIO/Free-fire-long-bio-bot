@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ff-bio-updater-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false       # Set manually in Render dashboard
+      - key: API_KEY
+        sync: false       # Set manually in Render dashboard
+      - key: WEBHOOK_URL
+        sync: false       # Set to your Render service URL, e.g. https://ff-bio-updater-bot.onrender.com
+      - key: PORT
+        value: 10000
+    healthCheckPath: /health
+    autoDeploy: true
