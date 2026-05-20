@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 BOT_TOKEN = os.getenv('BOT_TOKEN', '')
 API_KEY = os.getenv('API_KEY', '')
 API_BASE_URL = 'https://bio.ffutils.tech/api/update_bio'
-OWNER_USERNAME = '' #  '@fzgamerz'
+OWNER_USERNAME = '' #  '@fzgamerz_bot'
 REQUIRED_CHANNEL = '' # 
 if not BOT_TOKEN:
     logger.error("BOT_TOKEN environment variable not set!")
